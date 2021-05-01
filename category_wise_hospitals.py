@@ -48,7 +48,7 @@ def write(df):
 		article_printer.append(m)
 
 	
-	st.markdown('<div style = "position:relative; width:100%; height: 65vh; overflow-y: auto; margin-bottom:4px">'+" ".join(article_printer)+'</div>', unsafe_allow_html=True)
+	st.markdown('<div style = "position:relative; width:100%; height: 45vh; overflow-y: auto; margin-bottom:4px">'+" ".join(article_printer)+'</div>', unsafe_allow_html=True)
 
 	# if st.button('Hide Articles', key='hide_end_'+str(counter)):
 	# 	trending_topics.write('', trending_topics, related_article_index)

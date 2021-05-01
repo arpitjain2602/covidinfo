@@ -93,7 +93,7 @@ def main():
 	if len(option)>0:
 		temp_df = temp_df[temp_df['district'].isin(option)]
 	st.markdown('<div id="topic_'+str(counter)+'" style="position:relative; left:0%; width:100%; border-style: solid; border-color: #fefeff; box-shadow: 0px 1px 3px #aaa; padding: 5px 2px; margin-bottom: 5px; background-color: #fefeff; border-radius: 3px">		<div style="position: absolute; top: 0%; width:50%; height: 100%; color: #5d5d5d; padding-left: 4px; display: flex; align-items: center; font-size: 17px"><span><b>'+'General Beds'+'</b><br><span style="font-size:13px; color: grey"><i>'+str(len(temp_df))+' Hospitals'+'</i></span></span></div><div style="position: relative;left: 50%; width:50%; text-align:right; color: black;  padding-right: 4px; ">'+str(temp_df['gen-avail'].sum())+' Beds Available<br><span style = "color: '+color_selector(round(avg_grade))+'; font-size: 13px"><i>Check Availability<b>'+'</b></i></span></div></div>', unsafe_allow_html=True)
-	view_gen_hospital = st.checkbox('View Hospitals', key='topic_'+str(0))
+	view_gen_hospital = st.checkbox('Click here to view General Beds Hospitals', key='topic_'+str(0))
 
 	if view_gen_hospital:
 		category_wise_hospitals.write(temp_df)
@@ -102,7 +102,7 @@ def main():
 	if len(option)>0:
 		temp_df_oxy = temp_df_oxy[temp_df_oxy['district'].isin(option)]
 	st.markdown('<div id="topic_'+str(counter)+'" style="position:relative; left:0%; width:100%; border-style: solid; border-color: #fefeff; box-shadow: 0px 1px 3px #aaa; padding: 5px 2px; margin-bottom: 5px; background-color: #fefeff; border-radius: 3px">		<div style="position: absolute; top: 0%; width:50%; height: 100%; color: #5d5d5d; padding-left: 4px; display: flex; align-items: center; font-size: 17px"><span><b>'+'Oxygen Beds'+'</b><br><span style="font-size:13px; color: grey"><i>'+str(len(temp_df_oxy))+' Hospitals'+'</i></span></span></div><div style="position: relative;left: 50%; width:50%; text-align:right; color: black;  padding-right: 4px; ">'+str(temp_df_oxy['oxy-avail'].sum())+' Beds Available<br><span style = "color: '+color_selector(round(avg_grade))+'; font-size: 13px"><i>Check Availability<b>'+'</b></i></span></div></div>', unsafe_allow_html=True)
-	view_oxy_hospital = st.checkbox('View Hospitals', key='topic_'+str(1))
+	view_oxy_hospital = st.checkbox('Click here to view Oxygen Beds Hospitals', key='topic_'+str(1))
 	if view_oxy_hospital:
 		category_wise_hospitals.write(temp_df_oxy)
 
@@ -112,7 +112,7 @@ def main():
 	if len(option)>0:
 		temp_df_icugen = temp_df_icugen[temp_df_icugen['district'].isin(option)]
 	st.markdown('<div id="topic_'+str(counter)+'" style="position:relative; left:0%; width:100%; border-style: solid; border-color: #fefeff; box-shadow: 0px 1px 3px #aaa; padding: 5px 2px; margin-bottom: 5px; background-color: #fefeff; border-radius: 3px">		<div style="position: absolute; top: 0%; width:50%; height: 100%; color: #5d5d5d; padding-left: 4px; display: flex; align-items: center; font-size: 17px"><span><b>'+'ICU General Beds'+'</b><br><span style="font-size:13px; color: grey"><i>'+str(len(temp_df_icugen))+' Hospitals'+'</i></span></span></div><div style="position: relative;left: 50%; width:50%; text-align:right; color: black;  padding-right: 4px; ">'+str(temp_df_icugen['icu-gen'].sum())+' Beds Available<br><span style = "color: '+color_selector(round(avg_grade))+'; font-size: 13px"><i>Check Availability<b>'+'</b></i></span></div></div>', unsafe_allow_html=True)	
-	view_icugen_hospital = st.checkbox('View Hospitals', key='topic_'+str(2))
+	view_icugen_hospital = st.checkbox('Click here to view General ICU Hospitals', key='topic_'+str(2))
 	if view_icugen_hospital:
 		category_wise_hospitals.write(temp_df_icugen)
 
@@ -122,7 +122,7 @@ def main():
 	if len(option)>0:
 		temp_df_icuvent = temp_df_icuvent[temp_df_icuvent['district'].isin(option)]
 	st.markdown('<div id="topic_'+str(counter)+'" style="position:relative; left:0%; width:100%; border-style: solid; border-color: #fefeff; box-shadow: 0px 1px 3px #aaa; padding: 5px 2px; margin-bottom: 5px; background-color: #fefeff; border-radius: 3px">		<div style="position: absolute; top: 0%; width:50%; height: 100%; color: #5d5d5d; padding-left: 4px; display: flex; align-items: center; font-size: 17px"><span><b>'+'ICU Ventilator Beds'+'</b><br><span style="font-size:13px; color: grey"><i>'+str(len(temp_df_icuvent))+' Hospitals'+'</i></span></span></div><div style="position: relative;left: 50%; width:50%; text-align:right; color: black;  padding-right: 4px; ">'+str(temp_df_icuvent['icu-ventilator'].sum())+' Beds Available<br><span style = "color: '+color_selector(round(avg_grade))+'; font-size: 13px"><i>Check Availability<b>'+'</b></i></span></div></div>', unsafe_allow_html=True)
-	view_icuvent_hospital = st.checkbox('View Hospitals', key='topic_'+str(3))
+	view_icuvent_hospital = st.checkbox('Click here to view ICU Ventilator Hospitals', key='topic_'+str(3))
 	if view_icuvent_hospital:
 		category_wise_hospitals.write(temp_df_icuvent)
 
