@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run covidinfo.py
+web: sh setup.sh && streamlit run --server.port $PORT covidinfo.py
