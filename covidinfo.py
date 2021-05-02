@@ -11,7 +11,7 @@ def color_selector(score):
 	elif score < 33.33 and score >= 0:
 		return '#cc0000'
 
-@st.cache
+#@st.cache
 def fetching_data():
 	df = pd.read_html('https://docs.google.com/spreadsheets/d/e/2PACX-1vTpjIMDZNYJPCvVkhS_XSSFMr7Qyxhmf9a3m8ajPUuVXnEQBlOJbRCzPYSqSIfwaX-A_hhhjXuMWkm-/pubhtml?gid=0&single=true')[0]
 	del df['Unnamed: 0']
